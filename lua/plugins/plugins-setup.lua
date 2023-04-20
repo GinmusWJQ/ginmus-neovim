@@ -32,6 +32,10 @@ return require('packer').startup(function(use)
             require("nvim-tree").setup {}
         end
     }
+    use("christoomey/vim-tmux-navigator") --用crtl-hjkl来定位窗口
+    use "nvim-treesitter/nvim-treesitter" -- 语法高亮
+    use "p00f/nvim-ts-rainbow" -- 配合treesitter, 不同的括号颜色区分
+
     if packer_bootstrap then
         require('packer').sync()
     end
